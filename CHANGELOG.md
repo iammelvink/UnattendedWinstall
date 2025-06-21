@@ -1,32 +1,5 @@
 # Updates
 
-## 28/11/2024
-### v2.1.0 Changes
-#### `autounattend.xml` Changes
-- Removed the forced Pro edition enforcement. This is so the answer file can still be used with Home and especially Enterprise versions like LTSC.
-- Added an order to temporarily disable all network adapters so Windows Updates aren't installed during the OOBE phase. (This should stop Windows Defender from being Enabled automatically.)
-- Added a FirstLogon command that enables the network adapter again when the first user loads in after the OOBE phase.
-
-#### `autounattend.xml` & `UWScript.ps1` Changes
-- Removed Microsoft Edge and Google Chrome Policies as it seems to negatively impact user browsing experience.
-- Defined a new list of services that should be set to Disabled and Manual as the original list in v2.0.0 caused issues. The process count isn't as low as before but Windows should be more functional.
-
-## 1/11/2024
-- Released UnattendedWinstall v2.0.0
-
-## 3/8/2024
-- Added Core version which disables Windows Defender. Specifically, it disables the following services "Sense, WdBoot, WdFilter, WdNisDrv, WdNisSvc, WinDefend" which in turns prevents the MsMpEng.exe process from running. Credit to Christoph Schneegans for explaining.
-- Combined 64bit, 32bit and ARM64 support into a single `autounattend.xml` file for each version of the file.
-- Fixed the `ei.cfg` file creation to correctly show all available editions of Windows during the setup.
-- User Account Control is now set to default (level 3) at the end of the `currentuser.cmd` script.
-- Set Powershell ExecutionPolicy to "AllSigned" for better security. Thanks https://github.com/cyb3rm4gus
-- Set "When Windows Detects Communication Activity" under "System > Sound > More sound settings > Communications" to "Do Nothing". Thanks https://github.com/MicaelJarniac
-- Added Blocks the “Allow my organization to manage my device” and “No, sign in to this app only” pop-up message. Thanks https://github.com/Syntax3rror404
-- Changed `NetworkThrottlingIndex` to 10 (Default)
-- Removed the "Disables Hibernation" entry.
-- Created `TROUBLESHOOTING.md` to provide fixes to common "issues."
-- Updated `README.md` for better readability and included more information and FAQ's.
-
 ## 24/7/2024
 *These Updates apply to ALL Versions*
 
@@ -77,7 +50,6 @@ Added the following items to `wintweaks.ps1`
 ```
 Dism /Online /Enable-Feature /FeatureName:NetFx3 /All /Source:X:\sources\sxs /LimitAccess
 ```
-Reason: Auto-enables .NET Framework 3.5 (it's already a part of Windows) This fixes - https://github.com/memstechtips/UnattendedWinstall/issues/19
 
 ```
 # Create WinUtil shortcut on the desktop (sourced from CTT MicroWin)
@@ -104,7 +76,6 @@ $bytes = [System.IO.File]::ReadAllBytes($shortcutPath)
 $bytes[0x15] = $bytes[0x15] -bor 0x20
 [System.IO.File]::WriteAllBytes($shortcutPath, $bytes)
 ```
-Reason: This fixes https://github.com/memstechtips/UnattendedWinstall/issues/30 where the CTT WinUtil didn't launch correctly.
 
 ```
 <!-- Create or modify ei.cfg file -->
@@ -125,7 +96,7 @@ Reason: Prevents auto detection of Windows Edition and forces Windows Setup to s
 ```
 Reason: Was previously removed (by mistake) - It cleans up the start menu.
 
-Added ARM versions of all files. This fixes https://github.com/memstechtips/UnattendedWinstall/issues/8
+Added ARM versions of all files.
 
 ```
 :: Disables User Account Control
@@ -142,8 +113,6 @@ Reason: Doesn't work.
 
 
 ## 30/6/2024
-### Uploaded first edition of [IoT-LTSC-Like](https://github.com/memstechtips/UnattendedWinstall/blob/main/IoT-LTSC-Like/autounattend.xml) Answer File
-
 ### Removed
 ```
 :: Start Menu Customizations
