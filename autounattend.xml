@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
-	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Interactive&ProcessorArchitecture=x86&ProcessorArchitecture=amd64&ProcessorArchitecture=arm64&BypassRequirementsCheck=true&BypassNetworkCheck=true&HidePowerShellWindows=true&ComputerNameMode=Random&CompactOsMode=Default&TimeZoneMode=Implicit&PartitionMode=Interactive&DiskAssertionMode=Skip&WindowsEditionMode=Firmware&InstallFromMode=Automatic&UserAccountMode=InteractiveLocal&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=None&ShowFileExtensions=true&ClassicContextMenu=true&LaunchToThisPC=true&ShowEndTask=true&TaskbarSearch=Hide&TaskbarIconsMode=Empty&DisableWidgets=true&LeftTaskbar=true&HideTaskViewButton=true&DisableBingResults=true&StartTilesMode=Empty&StartPinsMode=Empty&DisableWindowsUpdate=true&DisableSmartScreen=true&DisableFastStartup=true&DisableSystemRestore=true&EnableLongPaths=true&HardenSystemDriveAcl=true&AllowPowerShellScripts=true&DisableLastAccess=true&PreventAutomaticReboot=true&TurnOffSystemSounds=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&HideEdgeFre=true&DisableEdgeStartupBoost=true&MakeEdgeUninstallable=true&DisablePointerPrecision=true&DeleteWindowsOld=true&ProcessAudit=true&EffectsMode=Custom&ListviewShadow=true&ThumbnailsOrIcon=true&FontSmoothing=true&DesktopIconsMode=Custom&IconControlPanel=true&IconRecycleBin=true&IconThisPC=true&WifiMode=Skip&ExpressSettings=DisableAll&KeysMode=Configure&CapsLockInitial=Off&CapsLockBehavior=Toggle&NumLockInitial=On&NumLockBehavior=Toggle&ScrollLockInitial=Off&ScrollLockBehavior=Toggle&StickyKeysMode=Disabled&ColorMode=Custom&SystemColorTheme=Dark&AppsColorTheme=Dark&AccentColor=%23000000&AccentColorOnStart=true&AccentColorOnBorders=true&WallpaperMode=Solid&WallpaperColor=%23000000&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveHandwriting=true&RemoveMailCalendar=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveMediaFeatures=true&RemoveMixedReality=true&RemoveZuneVideo=true&RemoveNews=true&RemoveOffice365=true&RemoveOneDrive=true&RemoveOneNote=true&RemoveOneSync=true&RemoveOpenSSHClient=true&RemoveOutlook=true&RemovePaint=true&RemovePaint3D=true&RemovePeople=true&RemovePhotos=true&RemovePowerAutomate=true&RemoveQuickAssist=true&RemoveRecall=true&RemoveRdpClient=true&RemoveSkype=true&RemoveSolitaire=true&RemoveSpeech=true&RemoveStepsRecorder=true&RemoveStickyNotes=true&RemoveTeams=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWallet=true&RemoveWeather=true&RemoveWindowsHello=true&RemoveZuneMusic=true&RemoveWordPad=true&RemoveXboxApps=true&RemoveYourPhone=true&SystemScript0=%23+Start+Transcript+to+capture+script+output%0D%0A%24logFile+%3D+%22C%3A%5CWindows%5CSetup%5CScripts%5Cunattend-01.log%22%0D%0AStart-Transcript+-Path+%24logFile&SystemScriptType0=Ps1&DefaultUserScript0=%23+Disabling+the+Delivery+of+Personalized+or+Suggested+Content+Like+App+Suggestions%2C+Tips%2C+and+Advertisements+in+Windows%0D%0Areg.exe+add+%22HKU%5CDefaultUser%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CContentDeliveryManager%22+%2Fv+%22ContentDeliveryAllowed%22+%2Ft+REG_DWORD+%2Fd+0+%2Ff&DefaultUserScriptType0=Cmd&FirstLogonScript0=%23+stop+edge+running%0D%0A%24stop+%3D+%22MicrosoftEdgeUpdate%22%2C+%22OneDrive%22%2C+%22WidgetService%22%2C+%22Widgets%22%2C+%22msedge%22%2C+%22msedgewebview2%22%0D%0A%24stop+%7C+ForEach-Object+%7B+Stop-Process+-Name+%24_+-Force+-ErrorAction+SilentlyContinue+%7D&FirstLogonScriptType0=Ps1&WdacMode=Skip-->
+	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Interactive&ProcessorArchitecture=x86&ProcessorArchitecture=amd64&ProcessorArchitecture=arm64&BypassRequirementsCheck=true&BypassNetworkCheck=true&HidePowerShellWindows=true&ComputerNameMode=Random&CompactOsMode=Default&TimeZoneMode=Implicit&PartitionMode=Interactive&DiskAssertionMode=Skip&WindowsEditionMode=Firmware&InstallFromMode=Automatic&PEMode=Default&UserAccountMode=InteractiveLocal&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=None&ShowFileExtensions=true&ClassicContextMenu=true&LaunchToThisPC=true&ShowEndTask=true&TaskbarSearch=Hide&TaskbarIconsMode=Empty&DisableWidgets=true&LeftTaskbar=true&HideTaskViewButton=true&DisableBingResults=true&StartTilesMode=Empty&StartPinsMode=Empty&DisableWindowsUpdate=true&DisableSmartScreen=true&DisableFastStartup=true&DisableSystemRestore=true&EnableLongPaths=true&HardenSystemDriveAcl=true&AllowPowerShellScripts=true&DisableLastAccess=true&PreventAutomaticReboot=true&TurnOffSystemSounds=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&HideEdgeFre=true&DisableEdgeStartupBoost=true&MakeEdgeUninstallable=true&DisablePointerPrecision=true&DisableCoreIsolation=true&DeleteWindowsOld=true&DisableWpbt=true&ProcessAudit=true&EffectsMode=Custom&ListviewShadow=true&ThumbnailsOrIcon=true&FontSmoothing=true&DeleteEdgeDesktopIcon=true&DesktopIconsMode=Custom&IconControlPanel=true&IconRecycleBin=true&IconThisPC=true&StartFoldersMode=Custom&StartFolderFileExplorer=true&StartFolderNetwork=true&StartFolderSettings=true&WifiMode=Skip&ExpressSettings=DisableAll&LockKeysMode=Configure&CapsLockInitial=Off&CapsLockBehavior=Toggle&NumLockInitial=On&NumLockBehavior=Toggle&ScrollLockInitial=Off&ScrollLockBehavior=Toggle&StickyKeysMode=Disabled&ColorMode=Custom&SystemColorTheme=Dark&AppsColorTheme=Dark&AccentColor=%23000000&AccentColorOnStart=true&AccentColorOnBorders=true&WallpaperMode=Solid&WallpaperColor=%23000000&LockScreenMode=Default&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveWindowsHello=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveHandwriting=true&RemoveMailCalendar=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveMediaFeatures=true&RemoveMixedReality=true&RemoveZuneVideo=true&RemoveNews=true&RemoveOffice365=true&RemoveOneDrive=true&RemoveOneNote=true&RemoveOneSync=true&RemoveOpenSSHClient=true&RemoveOutlook=true&RemovePaint=true&RemovePaint3D=true&RemovePeople=true&RemovePhotos=true&RemovePowerAutomate=true&RemoveQuickAssist=true&RemoveRecall=true&RemoveRdpClient=true&RemoveSkype=true&RemoveSolitaire=true&RemoveSpeech=true&RemoveStepsRecorder=true&RemoveStickyNotes=true&RemoveTeams=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWallet=true&RemoveWeather=true&RemoveZuneMusic=true&RemoveWordPad=true&RemoveXboxApps=true&RemoveYourPhone=true&SystemScript0=%23+Start+Transcript+to+capture+script+output%0D%0A%24logFile+%3D+%22C%3A%5CWindows%5CSetup%5CScripts%5Cunattend-01.log%22%0D%0AStart-Transcript+-Path+%24logFile&SystemScriptType0=Ps1&DefaultUserScript0=%23+Disabling+the+Delivery+of+Personalized+or+Suggested+Content+Like+App+Suggestions%2C+Tips%2C+and+Advertisements+in+Windows%0D%0Areg.exe+add+%22HKU%5CDefaultUser%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CContentDeliveryManager%22+%2Fv+%22ContentDeliveryAllowed%22+%2Ft+REG_DWORD+%2Fd+0+%2Ff&DefaultUserScriptType0=Cmd&FirstLogonScript0=%23+stop+edge+running%0D%0A%24stop+%3D+%22MicrosoftEdgeUpdate%22%2C+%22OneDrive%22%2C+%22WidgetService%22%2C+%22Widgets%22%2C+%22msedge%22%2C+%22msedgewebview2%22%0D%0A%24stop+%7C+ForEach-Object+%7B+Stop-Process+-Name+%24_+-Force+-ErrorAction+SilentlyContinue+%7D&FirstLogonScriptType0=Ps1&WdacMode=Skip&AppLockerMode=Skip-->
 	<settings pass="offlineServicing"></settings>
 	<settings pass="windowsPE">
 		<component name="Microsoft-Windows-Setup" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
@@ -331,51 +331,48 @@ foreach( $file in $Document.unattend.Extensions.File ) {
 		</ExtractScript>
 		<File path="C:\Windows\Setup\Scripts\RemovePackages.ps1">
 $selectors = @(
-    'Microsoft.Microsoft3DViewer';
-    'Microsoft.BingSearch';
-    'Clipchamp.Clipchamp';
-    'Microsoft.549981C3F5F10';
-    'Microsoft.Windows.DevHome';
-    'MicrosoftCorporationII.MicrosoftFamily';
-    'Microsoft.WindowsFeedbackHub';
-    'Microsoft.GetHelp';
-    'microsoft.windowscommunicationsapps';
-    'Microsoft.WindowsMaps';
-    'Microsoft.ZuneVideo';
-    'Microsoft.BingNews';
-    'Microsoft.MicrosoftOfficeHub';
-    'Microsoft.Office.OneNote';
-    'Microsoft.OutlookForWindows';
-    'Microsoft.Paint';
-    'Microsoft.MSPaint';
-    'Microsoft.People';
-    'Microsoft.Windows.Photos';
-    'Microsoft.PowerAutomateDesktop';
-    'MicrosoftCorporationII.QuickAssist';
-    'Microsoft.SkypeApp';
-    'Microsoft.MicrosoftSolitaireCollection';
-    'Microsoft.MicrosoftStickyNotes';
-    'MSTeams';
-    'Microsoft.Getstarted';
-    'Microsoft.Todos';
-    'Microsoft.WindowsSoundRecorder';
-    'Microsoft.BingWeather';
-    'Microsoft.ZuneMusic';
-    'Microsoft.Xbox.TCUI';
-    'Microsoft.XboxApp';
-    'Microsoft.XboxGameOverlay';
-    'Microsoft.XboxGamingOverlay';
-    'Microsoft.XboxIdentityProvider';
-    'Microsoft.XboxSpeechToTextOverlay';
-    'Microsoft.GamingApp';
-    'Microsoft.YourPhone';
-    'Microsoft.OneDrive';
-    'Microsoft.549981C3F5F10';
-    'Microsoft.MixedReality.Portal';
-    'Microsoft.Windows.Ai.Copilot.Provider';
-    'Microsoft.Copilot';
-    'Microsoft.Copilot_8wekyb3d8bbwe';
-    'Microsoft.WindowsMeetNow';
+	'Microsoft.Microsoft3DViewer';
+	'Microsoft.BingSearch';
+	'Clipchamp.Clipchamp';
+	'Microsoft.Copilot';
+	'Microsoft.549981C3F5F10';
+	'Microsoft.Windows.DevHome';
+	'MicrosoftCorporationII.MicrosoftFamily';
+	'Microsoft.WindowsFeedbackHub';
+	'Microsoft.GetHelp';
+	'Microsoft.Getstarted';
+	'microsoft.windowscommunicationsapps';
+	'Microsoft.WindowsMaps';
+	'Microsoft.MixedReality.Portal';
+	'Microsoft.BingNews';
+	'Microsoft.MicrosoftOfficeHub';
+	'Microsoft.Office.OneNote';
+	'Microsoft.OutlookForWindows';
+	'Microsoft.Paint';
+	'Microsoft.MSPaint';
+	'Microsoft.People';
+	'Microsoft.Windows.Photos';
+	'Microsoft.PowerAutomateDesktop';
+	'MicrosoftCorporationII.QuickAssist';
+	'Microsoft.SkypeApp';
+	'Microsoft.MicrosoftSolitaireCollection';
+	'Microsoft.MicrosoftStickyNotes';
+	'MicrosoftTeams';
+	'MSTeams';
+	'Microsoft.Todos';
+	'Microsoft.WindowsSoundRecorder';
+	'Microsoft.Wallet';
+	'Microsoft.BingWeather';
+	'Microsoft.Xbox.TCUI';
+	'Microsoft.XboxApp';
+	'Microsoft.XboxGameOverlay';
+	'Microsoft.XboxGamingOverlay';
+	'Microsoft.XboxIdentityProvider';
+	'Microsoft.XboxSpeechToTextOverlay';
+	'Microsoft.GamingApp';
+	'Microsoft.YourPhone';
+	'Microsoft.ZuneMusic';
+	'Microsoft.ZuneVideo';
 );
 $getCommand = {
   Get-AppxProvisionedPackage -Online;
@@ -1777,6 +1774,9 @@ $scripts = @(
 		icacls.exe C:\ /remove:g "*S-1-5-11"
 	};
 	{
+		Remove-Item -LiteralPath 'C:\Users\Public\Desktop\Microsoft Edge.lnk' -ErrorAction 'SilentlyContinue' -Verbose;
+	};
+	{
 		auditpol.exe /set /subcategory:"{0CCE922B-69AE-11D9-BED3-505054503030}" /success:enable /failure:enable;
 	};
 	{
@@ -1812,7 +1812,8 @@ $scripts = @(
 		reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v HideFirstRunExperience /t REG_DWORD /d 1 /f;
 	};
 	{
-		reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v StartupBoostEnabled /t REG_DWORD /d 0 /f;
+		reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v BackgroundModeEnabled /t REG_DWORD /d 0 /f;
+		reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v StartupBoostEnabled /t REG_DWORD /d 0 /f;
 	};
 	{
 		Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\MakeEdgeUninstallable.ps1' -Raw | Invoke-Expression;
@@ -1878,6 +1879,9 @@ $scripts = @(
 		[System.Diagnostics.EventLog]::WriteEntry( 'UnattendGenerator', "User '$env:USERNAME' has requested to unlock the Start menu layout.", [System.Diagnostics.EventLogEntryType]::Information, 1 );
 	};
 	{
+		Remove-Item -LiteralPath "${env:USERPROFILE}\Desktop\Microsoft Edge.lnk" -ErrorAction 'SilentlyContinue' -Verbose;
+	};
+	{
 		Set-ItemProperty -LiteralPath 'Registry::HKCU\AppEvents\Schemes' -Name '(Default)' -Type 'String' -Value '.None';
 	};
 	{
@@ -1927,6 +1931,9 @@ $scripts = @(
 		Set-ItemProperty -Path 'Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel' -Name '{20d04fe0-3aea-1069-a2d8-08002b30309d}' -Value 0 -Type 'DWord';
 		Set-ItemProperty -Path 'Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel' -Name '{59031a47-3f72-44a7-89c5-5595fe6b30ee}' -Value 1 -Type 'DWord';
 		Set-ItemProperty -Path 'Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel' -Name '{a0953c92-50dc-43bf-be83-3742fed03c9c}' -Value 1 -Type 'DWord';
+	};
+	{
+		Set-ItemProperty -Path 'Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start' -Name 'VisiblePlaces' -Value $( [convert]::FromBase64String('vCSKFAzWiUKggG7Zu6JIgkSBdf4NCK5Ci9o07Ze2Y5SGCHNSqlFDQp97J3ZYRlnU') ) -Type 'Binary';
 	};
 	{
 		Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\SetColorTheme.ps1' -Raw | Invoke-Expression;
@@ -2014,6 +2021,8 @@ $scripts = @(
 		  'SubscribedContent-338388Enabled';
 		  'SubscribedContent-338389Enabled';
 		  'SubscribedContent-338393Enabled';
+		  'SubscribedContent-353694Enabled';
+		  'SubscribedContent-353696Enabled';
 		  'SubscribedContent-353698Enabled';
 		  'SystemPaneSuggestionsEnabled';
 		);
@@ -2048,7 +2057,16 @@ $scripts = @(
 		reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDeveloperSettings" /v TaskbarEndTask /t REG_DWORD /d 1 /f;
 	};
 	{
-		reg.exe add "HKU\DefaultUser\Control Panel\Accessibility\StickyKeys" /v Flags /t REG_SZ /d 10 /f;
+		reg.exe add "HKU\.DEFAULT\Control Panel\Accessibility\StickyKeys" /v Flags /t REG_SZ /d 10 /f;
+	};
+	{
+		  reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 0 /f;
+		  reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d 0 /f;
+		  reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "EnabledBootId" /t REG_DWORD /d 0 /f;
+		  reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "WasEnabledBy" /t REG_DWORD /d 0 /f;
+	};
+	{
+		reg.exe add "HKLM\System\CurrentControlSet\Control\Session Manager" /v "DisableWpbtExecution" /t REG_DWORD /d 1 /f;
 	};
 	{
 		reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d 1 /f;
@@ -2087,6 +2105,17 @@ $scripts = @(
 $scripts = @(
 	{
 		Disable-ComputerRestore -Drive 'C:\';
+
+		# Windows Defender exclusions
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command "Add-MpPreference -ExclusionPath 'C:\_Tools'";
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command "Add-MpPreference -ExclusionPath 'C:\tools'";
+
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command "Add-MpPreference -ExclusionProcess 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command irm https://christitus.com/win | iex'";
+
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:USERPROFILE\Desktop\LAUNCH-CTT-WINUTIL.lnk"';
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:USERPROFILE\Desktop\Apps\LAUNCH-CTT-WINUTIL.lnk"';
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\LAUNCH-CTT-WINUTIL.lnk"';
+		# END Windows Defender exclusions
 	};
 	{
 		cmd.exe /c "rmdir C:\Windows.old";
