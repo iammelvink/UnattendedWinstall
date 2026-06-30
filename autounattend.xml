@@ -890,6 +890,30 @@ $bytes = [System.IO.File]::ReadAllBytes($shortcutPath)
 $bytes[0x15] = $bytes[0x15] -bor 0x20
 [System.IO.File]::WriteAllBytes($shortcutPath, $bytes)
 
+# Create Winhance shortcut on the desktop (sourced from Memory)
+$desktopPath = "C:\Users\Default\Desktop"
+# Specify the target PowerShell command
+$command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command irm 'https://get.winhance.net | iex'"
+# Specify the path for the shortcut
+$shortcutPath = Join-Path $desktopPath 'LAUNCH-Winhance.lnk'
+# Create a shell object
+$shell = New-Object -ComObject WScript.Shell
+    
+# Create a shortcut object
+$shortcut = $shell.CreateShortcut($shortcutPath)
+        
+# Set properties of the shortcut
+$shortcut.TargetPath = "powershell.exe"
+$shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -Command `"$command`""
+# Save the shortcut
+$shortcut.Save()
+    
+# Make the shortcut have 'Run as administrator' property on
+$bytes = [System.IO.File]::ReadAllBytes($shortcutPath)
+# Set byte value at position 0x15 in hex, or 21 in decimal, from the value 0x00 to 0x20 in hex
+$bytes[0x15] = $bytes[0x15] -bor 0x20
+[System.IO.File]::WriteAllBytes($shortcutPath, $bytes)
+
 # Enables .NET Framework 3.5
 DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /Source:X:\sources\sxs /LimitAccess
 
@@ -2115,6 +2139,12 @@ $scripts = @(
 		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:USERPROFILE\Desktop\LAUNCH-CTT-WINUTIL.lnk"';
 		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:USERPROFILE\Desktop\Apps\LAUNCH-CTT-WINUTIL.lnk"';
 		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\LAUNCH-CTT-WINUTIL.lnk"';
+
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command "Add-MpPreference -ExclusionProcess 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command irm https://get.winhance.net | iex'";
+
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:USERPROFILE\Desktop\LAUNCH-Winhance.lnk"';
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:USERPROFILE\Desktop\Apps\LAUNCH-Winhance.lnk"';
+		PowerShell -NoProfile -ExecutionPolicy Bypass -Command 'Add-MpPreference -ExclusionPath \"$env:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\LAUNCH-Winhance.lnk"';
 		# END Windows Defender exclusions
 	};
 	{
